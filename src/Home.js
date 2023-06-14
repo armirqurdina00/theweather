@@ -8,12 +8,14 @@ const Home = () => {
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState(null)
 
+    const key = "634bbb0418d7c7233fa229870f4a1a1e"
+
     const handleClick = (e) => {
         e.preventDefault()
         setData(null)
         setIsLoading(true)
         setError(null)
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=634bbb0418d7c7233fa229870f4a1a1e`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${key}`)
         .then(response => {
             if (response.ok){
                 return response.json()
