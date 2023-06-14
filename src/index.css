@@ -1,13 +1,150 @@
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  /* background-color: #222; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  margin: 0;
+}
+
+.header{
+  text-align: center;
+  font-size: 24px;
+  padding: 10px;
+  background-color: rgba(51,51,51,1);
+  color: white;
+}
+
+.home{
+  margin: 0 auto;
+  padding: 20px;
+}
+
+form{
+  width: 100%;
+  margin: 0px auto;
+  display: flex;
+}
+
+input[type="text"]{
+  width: 75%;
+  padding: 10px;
+  font-size: 18px;
+  /* background-color: #555;
+  color: white; */
+}
+
+button{
+  background-color: rgba(51,51,51,1);
+  color: white;
+  padding: 10px;
+  width: 25%;
+  font-size: 18px;
+}
+
+.details{
+  margin: 20px 0;
+  color: white;
+}
+
+.details-main{
+  background: linear-gradient(180deg, rgba(65,62,122,1) 0%, rgba(51,51,51,1) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50vh;
+  padding: 30px;
+  border-bottom: 1px solid gray;
+}
+
+.details-secondary{
+  background-color: #333;
+  padding: 30px;
+  height: 50vh;
+}
+
+.details h1{
+  font-size: 20px;
+}
+
+.main-descr{
+  font-size: 16px; 
+}
+
+.details .main-temp{
+  font-size: 60px;
+}
+
+.flex-between{
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+/* loader */
+
+.loader {
+  border: 5px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 5px solid gray;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spin 1s linear infinite; /* Safari */
+  animation: spin 1s linear infinite;
+}
+
+.loader-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg); }
+}
+
+@media only screen and (min-width: 1024px) {
+  .details{
+    display: flex;
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 20px auto;
+  }
+
+  .details-main{
+    background: linear-gradient(90deg, rgba(65,62,122,1) 0%, rgba(51,51,51,1) 100%);
+    border-bottom: none;
+    border-right: 1px solid gray;
+    width: 50%;
+  }
+
+  form{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -15%);
+  }
+
+  .details-secondary{
+    width: 50%;
+  }
+
+  form{
+    width: 50%;
+  }
 }
