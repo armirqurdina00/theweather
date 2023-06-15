@@ -43,7 +43,7 @@ const Home = () => {
                 <button onClick={handleClick}>Submit</button>
             </form>
             { isLoading && <div className="loader-wrapper m-[20px]"><div className="loader"></div></div> }
-            { error && <div className="text-center m-[20px]">{ error }</div> }
+            { error && <div className="text-center text-white m-[20px]">{ error }</div> }
             { data && <DataDetails data={data}/> }
         </div>
     )
